@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Mooli } from "next/font/google";
-import NavbarNextUi from "../componentsUi/NavbarNextUi";
 import "./globals.css";
 
+import { AnimatedGridBackgroundSection } from "./AnimGrid/AnimGridBg";
 import { TanstackProviders } from "./TanstackProviders";
 import "/css/fontStyle.css";
 import "/css/Uiverse.css";
@@ -23,10 +23,9 @@ export default function RootLayout({
     <html lang="en" className="dark" suppressHydrationWarning={true}>
       <body className={fontStyle.className}>
         <TanstackProviders>
-          <div className="">
-            <NavbarNextUi />
+          <AnimatedGridBackgroundSection>
             {children}
-          </div>
+          </AnimatedGridBackgroundSection>
         </TanstackProviders>
       </body>
     </html>
