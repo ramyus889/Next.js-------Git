@@ -1,6 +1,5 @@
 "use client";
 
-import UserTime from "@/app/(useComponents)/(components)/components/UserTime";
 import {
   Link,
   Navbar,
@@ -13,7 +12,7 @@ import {
 } from "@nextui-org/react";
 import { usePathname } from "next/navigation";
 import React from "react";
-import ThemeSwitcher from "./../app/(useComponents)/(components)/components/ThemeSwitcher";
+
 import { AcmeLogo } from "./AcmeLogo.jsx";
 
 export default function App() {
@@ -67,93 +66,9 @@ export default function App() {
             Home
           </Link>
         </NavbarItem>
-        <NavbarItem>
-          <Link
-            className={` pe-5 ${
-              pathname === "/useComponents" ? userclasstrue : userclassfalse
-            }`}
-            href="/useComponents"
-          >
-            useComponents
-          </Link>
-        </NavbarItem>
-
-        <NavbarItem>
-          <Link
-            className={` pe-5 ${
-              pathname === "/Different" ? userclasstrue : userclassfalse
-            }`}
-            href="/Different"
-          >
-            Different
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            className={` pe-5 ${
-              pathname === "/AosChildren" ? userclasstrue : userclassfalse
-            }`}
-            href="/AosChildren"
-          >
-            AosChildren
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            className={` pe-5 ${
-              pathname === "/practice" ? userclasstrue : userclassfalse
-            }`}
-            href="/practice"
-          >
-            practice
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            className={` pe-5 ${
-              pathname === "/Chart" ? userclasstrue : userclassfalse
-            }`}
-            href="/Chart"
-          >
-            Chart
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            className={` pe-5 ${
-              pathname === "/Lukacho" ? userclasstrue : userclassfalse
-            }`}
-            href="/Lukacho"
-          >
-            Lukacho
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            className={` pe-5 ${
-              pathname === "/Redux" ? userclasstrue : userclassfalse
-            }`}
-            href="/Redux"
-          >
-            Redux
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            className={` pe-5 ${
-              pathname === "/ReactQ" ? userclasstrue : userclassfalse
-            }`}
-            href="/ReactQ"
-          >
-            ReactQ
-          </Link>
-        </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
-        <NavbarItem className="hidden items-center gap-5 sm:flex">
-          <UserTime />
-          <ThemeSwitcher />
-        </NavbarItem>
+        <NavbarItem className="hidden items-center gap-5 sm:flex"></NavbarItem>
       </NavbarContent>
       <NavbarMenu>
         {menuItems.map((item, index) => (

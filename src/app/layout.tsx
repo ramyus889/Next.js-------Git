@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Mooli } from "next/font/google";
 import NavbarNextUi from "../componentsUi/NavbarNextUi";
-import UserAos from "./(useComponents)/AosChildren/UserAos";
 import "./globals.css";
-import { Providers } from "./providers";
-import { TanstackProviders } from "./ReactQ/providers/TanstackProviders";
+
+import { TanstackProviders } from "./TanstackProviders";
 import "/css/fontStyle.css";
 import "/css/Uiverse.css";
 
@@ -24,14 +23,10 @@ export default function RootLayout({
     <html lang="en" className="dark" suppressHydrationWarning={true}>
       <body className={fontStyle.className}>
         <TanstackProviders>
-          <Providers>
-            <div className="">
-              <UserAos>
-                <NavbarNextUi />
-                {children}
-              </UserAos>
-            </div>
-          </Providers>
+          <div className="">
+            <NavbarNextUi />
+            {children}
+          </div>
         </TanstackProviders>
       </body>
     </html>
